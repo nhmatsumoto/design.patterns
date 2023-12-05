@@ -2,6 +2,29 @@
 
 A classe UnitOfWork é um componente que facilita a interação com um banco de dados por meio do padrão Unit of Work. Ela encapsula o acesso ao banco de dados e gerencia a criação de repositórios específicos para cada tipo de entidade. Além disso, fornece métodos para salvar alterações de forma assíncrona e liberar recursos adequadamente.
 
+# Dependência de Injeção (DI)
+
+A classe UnitOfWork é projetada para ser usada em conjunto com a Injeção de Dependência (DI) para garantir uma gestão eficiente de recursos e uma abordagem modular na configuração da aplicação.
+
+# Configuração da Injeção de Dependência
+
+No arquivo Bootstrap.cs, configure a injeção de dependência para a interface IUnitOfWork e outros serviços relacionados.
+
+```csharp
+public static class Bootstrap {
+    public static void RegisterAppServices(this IServiceCollection services)
+    {
+        services.AddDbContext<AppDbContext>(options =>
+            options.UseInMemoryDatabase("InMemoryDatabase"));
+
+        services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+        services.AddScoped<WeatherForecastController>();
+    }
+}
+```
+
 # Construtor
 
 ```csharp
