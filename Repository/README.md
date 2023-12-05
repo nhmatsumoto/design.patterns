@@ -22,14 +22,14 @@ public IRepository<T> GetRepository<T>() where T : class
 
 # GetRepository<T>()
 
-    * Parâmetros de Tipo:
-        * 'T' é o tipo da entidade para a qual o repositório é recuperado
+* Parâmetros de Tipo:
+    * 'T' é o tipo da entidade para a qual o repositório é recuperado
 
-    * Retorno:
-        * Uma instância de IRepository<T>
+* Retorno:
+    * Uma instância de IRepository<T>
 
-    * Descrição:
-        * Obtém um repositório para o tipo de entidade especificado. Se o repositório já existir, retorna o existente; caso contrário, cria uma nova instância.
+* Descrição:
+    * Obtém um repositório para o tipo de entidade especificado. Se o repositório já existir, retorna o existente; caso contrário, cria uma nova instância.
 
 * SaveChangesAsync()
 
@@ -63,15 +63,19 @@ private readonly DbContext _context;
 private Dictionary<Type, object> _repositories;
 ```
 
-    * Parâmetro de Tipo:
-        * Não tem.
+* Parâmetro de Tipo:
+    * Não tem.
 
-    * Retorno:
-        * Não tem.
+* Retorno:
+    * Não tem.
 
-    * Descrição: 
-        * _context: O contexto do banco de dados utilizado para interações com o banco de dados.
+* Descrição: 
+    * _context: 
+        * O contexto do banco de dados utilizado para interações com o banco de dados.
 
-        * _repositories: Um dicionário para armazenar instâncias de repositórios específicos por tipo de entidade.
+    * _repositories: 
+        * Um dicionário para armazenar instâncias de repositórios específicos por tipo de entidade.
+
+
 
 A classe UnitOfWork oferece uma abordagem consistente para manipulação de operações no banco de dados, promovendo a coesão e reutilização de código por meio do padrão Unit of Work e Repository. Essa estrutura facilita a manutenção e expansão de aplicações que requerem interações com banco de dados de forma organizada e eficiente.
