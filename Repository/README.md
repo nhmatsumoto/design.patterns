@@ -31,27 +31,19 @@ public IRepository<T> GetRepository<T>() where T : class
 * Descrição:
     * Obtém um repositório para o tipo de entidade especificado. Se o repositório já existir, retorna o existente; caso contrário, cria uma nova instância.
 
-* SaveChangesAsync()
+# SaveChangesAsync()
 
-    * Parâmetros de Tipo: 
-        * Não tem.
+* Retorno:
+    * Uma tarefa que representa a operação assíncrona com o número de linhas afetadas.
 
-    * Retorno:
-        * Uma tarefa que representa a operação assíncrona com o número de linhas afetadas.
-
-    * Descrição:
-        * Salva assincronamente todas as alterações feitas no contexto no banco de dados subjacente.
+* Descrição:
+    * Salva assincronamente todas as alterações feitas no contexto no banco de dados subjacente.
 
 # Dispose() 
 
 ```csharp
 public void Dispose()
 ```
-* Parêmetro de Tipo: 
-    * Não tem.
-
-* Retorno: 
-    * Não tem.
 
 * Descrição:
     * Libera os recursos usados pela instância da classe UnitOfWork.
@@ -62,12 +54,6 @@ public void Dispose()
 private readonly DbContext _context;
 private Dictionary<Type, object> _repositories;
 ```
-
-* Parâmetro de Tipo:
-    * Não tem.
-
-* Retorno:
-    * Não tem.
 
 * Descrição: 
     * _context: 

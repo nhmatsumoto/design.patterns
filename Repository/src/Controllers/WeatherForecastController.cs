@@ -32,9 +32,9 @@ namespace nhmatsumoto.repository.pattern.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] WeatherForecast model)
         {
-            var seuModeloRepository = _unitOfWork.GetRepository<WeatherForecast>();
+            var repository = _unitOfWork.GetRepository<WeatherForecast>();
 
-            seuModeloRepository.Insert(model);
+            repository.Insert(model);
 
             var rows = _unitOfWork.SaveChangesAsync().GetAwaiter().GetResult(); 
 
