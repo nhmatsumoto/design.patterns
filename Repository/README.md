@@ -72,7 +72,7 @@ private Dictionary<Type, object> _repositories;
 
 ____
 
-# Dependência de Injeção (DI)
+# Injeção de Dependência (DI)
 
 A classe UnitOfWork é projetada para ser usada em conjunto com a Injeção de Dependência (DI) para garantir uma gestão eficiente de recursos e uma abordagem modular na configuração da aplicação.
 
