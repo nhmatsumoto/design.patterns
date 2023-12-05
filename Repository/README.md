@@ -47,14 +47,14 @@ public IRepository<T> GetRepository<T>() where T : class
 ```csharp
 public void Dispose()
 ```
-    * Parêmetro de Tipo: 
-        * Não tem.
+* Parêmetro de Tipo: 
+    * Não tem.
 
-    * Retorno: 
-        * Não tem.
+* Retorno: 
+    * Não tem.
 
-    Descrição:
-        * Libera os recursos usados pela instância da classe UnitOfWork.
+* Descrição:
+    * Libera os recursos usados pela instância da classe UnitOfWork.
 
 # Propriedades Privadas
 
